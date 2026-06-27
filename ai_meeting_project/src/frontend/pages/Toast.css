@@ -1,0 +1,133 @@
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  animation: slideInRight 0.3s ease, slideOutRight 0.3s ease 2.7s;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.toast-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  color: #1f2937;
+}
+
+/* Success Toast */
+.toast-success {
+  border-left: 4px solid #10b981;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.toast-success .toast-message {
+  color: #065f46;
+}
+
+/* Error Toast */
+.toast-error {
+  border-left: 4px solid #ef4444;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.toast-error .toast-message {
+  color: #7f1d1d;
+}
+
+/* Warning Toast */
+.toast-warning {
+  border-left: 4px solid #f59e0b;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.toast-warning .toast-message {
+  color: #92400e;
+}
+
+/* Info Toast */
+.toast-info {
+  border-left: 4px solid #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.toast-info .toast-message {
+  color: #1e40af;
+}
+
+.toast-progress {
+  height: 3px;
+  background: linear-gradient(90deg, currentColor 0%, transparent 100%);
+  animation: progress 3s linear;
+}
+
+.toast-success .toast-progress {
+  background: linear-gradient(90deg, #10b981 0%, transparent 100%);
+}
+
+.toast-error .toast-progress {
+  background: linear-gradient(90deg, #ef4444 0%, transparent 100%);
+}
+
+.toast-warning .toast-progress {
+  background: linear-gradient(90deg, #f59e0b 0%, transparent 100%);
+}
+
+.toast-info .toast-progress {
+  background: linear-gradient(90deg, #3b82f6 0%, transparent 100%);
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    max-width: none;
+  }
+}

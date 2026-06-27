@@ -1,0 +1,26 @@
+From the meeting transcript, extract all actionable tasks with clear responsibility and deadlines.
+
+For each task:
+- Rewrite the task description in a short, clear, professional way (max 8–12 words).
+- Identify the assigned person or team clearly.
+- Extract the deadline (IMPORTANT: Extract deadline even if implied or inferred from context - look for relative dates like "tomorrow", "next week", "end of month", or "after [other task]").
+- If no explicit deadline is mentioned, infer one from context if possible, otherwise mark as "TBD".
+
+If a person has multiple tasks, list them as separate rows.
+
+Sort the final output alphabetically by the "Assigned To" column.
+
+Transcript:
+{{TRANSCRIPT}}
+
+First, give a 2–3 line overview of task distribution and any urgent deadlines.
+
+Then present the results in a clean markdown table with columns:
+
+Assigned To | Task | Deadline
+
+IMPORTANT RULES:
+1. Do NOT skip deadline extraction - always look for temporal indicators in the transcript
+2. Be specific with dates (e.g., "Jan 27, 2026" instead of just "Tomorrow")
+3. If deadline is relative to another task, mention that (e.g., "After John completes APS")
+4. Mark truly unclear deadlines as "TBD - Discuss with team"

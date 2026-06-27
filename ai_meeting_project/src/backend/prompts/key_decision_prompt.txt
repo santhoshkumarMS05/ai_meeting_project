@@ -1,0 +1,28 @@
+From the meeting transcript, identify the key decisions that were made.
+
+A key decision is:
+- A finalized choice, approval, or agreement
+- A confirmed direction, plan, or resolution
+- Something the team explicitly agreed on during the meeting
+
+For each decision, extract:
+- Decision
+- Decided By (person or group, if mentioned)
+- Context (brief reason or discussion summary)
+
+Transcript:
+{{TRANSCRIPT}}
+
+Present the output in a clean table format with columns:
+Decision | Decided By | Context
+
+Rules:
+- Only include decisions that were clearly finalized.
+- Do NOT include suggestions, open discussions, or undecided ideas.
+- Keep each decision concise and clear.
+- List decisions in the order they occurred in the meeting.
+- If no decisions were made, respond with:
+"No key decisions were made in this meeting."
+
+After the table, add this note:
+Note: Only explicit and clearly finalized decisions are included.

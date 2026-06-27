@@ -1,0 +1,25 @@
+From the meeting transcript, identify task dependencies between people.
+A dependency exists when:
+- One person's task cannot start until another person's task is completed.
+
+For each dependency, extract:
+- Dependent Person
+- Dependent Task
+- Depends On (Person)
+- Depends On Task
+- Reason (explicitly mentioned or logically implied)
+
+Transcript:
+{{TRANSCRIPT}}
+
+Present the output in a clean table format with columns:
+Dependent Person | Dependent Task | Depends On | Depends On Task | Reason
+
+Rules:
+- Keep task names concise and action-oriented.
+- Include only real dependencies where one task must wait for another.
+- List dependencies in chronological/sequential order (earliest dependencies first, showing the workflow from start to finish).
+- If no dependencies exist, respond with: "No task dependencies identified in this meeting."
+
+After the table, add this note:
+Note: Some tasks may have implicit dependencies, but only explicit or clearly logical dependencies are included in the table.

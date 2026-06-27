@@ -1,0 +1,28 @@
+From the meeting transcript, identify the agreed next steps.
+
+A next step is:
+- A follow-up action agreed upon
+- A future task or activity to be done after the meeting
+- An action that may or may not have an owner, but is clearly stated
+
+For each next step, extract:
+- Action
+- Owner (if mentioned, else "Unassigned")
+- Expected Outcome (short and clear)
+
+Transcript:
+{{TRANSCRIPT}}
+
+Present the output in a clean table format with columns:
+Action | Owner | Expected Outcome
+
+Rules:
+- Include only actionable and agreed follow-ups.
+- Do NOT include vague ideas or discussion points.
+- Keep actions concise and action-oriented.
+- List next steps in the order they were mentioned.
+- If no next steps are identified, respond with:
+"No next steps were identified in this meeting."
+
+After the table, add this note:
+Note: Only explicit follow-up actions mentioned during the meeting are included.
