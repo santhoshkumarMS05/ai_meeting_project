@@ -24,3 +24,28 @@ dist-ssr
 *.sw?
 
 .env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Database
+*.db
+
+# Generated files
+generated_pdfs/
+audio_recordings/
+uploads/
+
+# If under src/backend
+src/backend/generated_pdfs/
+src/backend/audio_recordings/
+src/backend/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
