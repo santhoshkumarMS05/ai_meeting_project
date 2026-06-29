@@ -40,87 +40,15 @@ This project is designed for users who want to turn raw meeting discussion into 
 
 ## Project flow
 
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "18px", "nodeBorderRadius": "12", "primaryColor": "#2563EB", "secondaryColor": "#10B981", "tertiaryColor": "#F59E0B"}}}%%
-flowchart LR
-    A["👤 User logs in"] --> B["🖥️ Open Dashboard"]
-    B --> C["🎙️ Start or join meeting"]
-    C --> D["🎧 Capture audio / upload transcript"]
-    D --> E["🧠 AI processing"]
-    E --> F["📝 Generate summary"]
-    E --> G["🔗 Extract tasks, dependencies, decisions, next steps"]
-    F --> H["💾 Save to history"]
-    G --> H
-    H --> I["📄 Create PDF report"]
-    H --> J["📧 Send email updates"]
-    I --> K["👀 Review results"]
-    J --> K
-
-    classDef start fill:#4F46E5,stroke:#312E81,color:#fff,stroke-width:2px,font-size:18px;
-    classDef process fill:#2563EB,stroke:#1D4ED8,color:#fff,stroke-width:2px,font-size:18px;
-    classDef output fill:#10B981,stroke:#047857,color:#fff,stroke-width:2px,font-size:18px;
-    classDef action fill:#F59E0B,stroke:#B45309,color:#fff,stroke-width:2px,font-size:18px;
-
-    class A start;
-    class B,C,D,E process;
-    class F,G,H,I,J,K output;
-```
+<div align="center">
+  <img src="src/assets/flow_diagram.png" alt="Project flow diagram" width="900" height="500" />
+</div>
 
 ## Architecture diagram
 
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "18px", "nodeBorderRadius": "12", "primaryColor": "#2563EB", "secondaryColor": "#10B981", "tertiaryColor": "#F59E0B"}}}%%
-flowchart TB
-    subgraph User Layer
-        U["👤 User"]
-    end
-
-    subgraph Frontend
-        FE["⚛️ React Frontend"]
-    end
-
-    subgraph Backend API
-        API["🐍 Flask Backend API"]
-        AUTH["🔐 Authentication Service"]
-        MEET["🎙️ Meeting Workflow Service"]
-        AI["🧠 AI Agents"]
-        DB["🗄️ SQLite + MongoDB"]
-    end
-
-    subgraph AI Services
-        STT["🎧 Speech / Transcript Processing"]
-        PDF["📄 PDF Generator"]
-        EMAIL["📧 Email Agent"]
-    end
-
-    subgraph Data & Storage
-        AUDIO["💾 Audio Storage"]
-        HISTORY["📚 Meeting History"]
-    end
-
-    U --> FE
-    FE --> API
-    API --> AUTH
-    API --> MEET
-    API --> AI
-    API --> DB
-
-    AI --> STT
-    AI --> PDF
-    AI --> EMAIL
-    MEET --> AUDIO
-    DB --> HISTORY
-
-    classDef user fill:#7C3AED,stroke:#5B21B6,color:#fff,stroke-width:2px,font-size:18px;
-    classDef app fill:#2563EB,stroke:#1D4ED8,color:#fff,stroke-width:2px,font-size:18px;
-    classDef service fill:#0EA5E9,stroke:#0369A1,color:#fff,stroke-width:2px,font-size:18px;
-    classDef data fill:#10B981,stroke:#047857,color:#fff,stroke-width:2px,font-size:18px;
-
-    class U user;
-    class FE,API app;
-    class AUTH,MEET,AI,STT,PDF,EMAIL service;
-    class DB,AUDIO,HISTORY data;
-```
+<div align="center">
+  <img src="src/assets/architecture_diagram.png" alt="Architecture diagram" width="900" height="500" />
+</div>
 
 ## Project structure
 
